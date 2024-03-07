@@ -1,0 +1,41 @@
+form[name="contact-us"] {
+  width: 100%;
+  .form-textarea-wrapper {
+    label.error {
+      bottom: -30px;
+    }
+  }
+  .form-actions {
+    margin-top: 32px;
+    .button {
+      width: 100%;
+      border-radius: 8px;
+      background: var(--gradient);
+
+      display: flex;
+      width: 480px;
+      height: 60px;
+      padding: 20px 40px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      color: var(--color-white);
+      font-family: Poppins;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
+  .form-field:nth-child(1),
+  .form-field:nth-child(2) {
+    width: calc(50% - 3px);
+    /* Adjust width based on your design */
+    display: inline-block;
+    @include desktop-small {
+      width: 100%;
+      display: block;
+    }
+  }
+}

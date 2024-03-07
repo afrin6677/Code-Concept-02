@@ -1,0 +1,51 @@
+title: Hero
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+
+          fields:
+            content:
+              unset@: true
+            header.media_order:
+                ordering@: 99
+            hero_section:
+              type: section
+              title: Hero Section
+              underline: true
+              fields:
+                header.hero.h1.translatable:
+                  type: text
+                  label: H1 Hero Header
+                  classess: 'translatable'
+                header.hero.text.translatable:
+                  type: textarea
+                  label: Hero Text
+                  classess: 'translatable'
+                header.hero.image:
+                    type: pagemediaselect
+                    label: Hero image
+                header.hero.hero_bg:
+                    type: pagemediaselect
+                    label: Hero image Bg
+                header.hero.size:
+                  type: select
+                  label: Hero size
+                  options:
+                    large: Large
+                    medium: Medium
+                header.hero.buttons:
+                  type: list
+                  label: Hero Buttons
+                  style: vertical
+                  fields:
+                    .text.translatable:
+                      type: text
+                      label: Button Text
+                      classess: 'translatable'
+                    .link:
+                      type: text
+                      label: Button Link

@@ -1,0 +1,107 @@
+.contact-inner {
+  display: flex;
+  flex-direction: row;
+  padding-top: 64px;
+  padding-bottom: 96px;
+  justify-content: space-evenly;
+  gap: 64px;
+
+  @include desktop-small {
+    padding: 64px 16px;
+    flex-direction: column;
+  }
+
+
+
+  .contact-section {
+    display: flex;
+    padding: 20px 64px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 18px;
+    border: 2px solid var(--color-purple, #7775FC);
+    gap: 24px;
+    align-self: stretch;
+
+    @include desktop-small {
+      padding: 10px 16px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    p {
+      background: var(--gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      
+      a, .span {
+        background: var(--color-black);
+        background-clip: text;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+      }
+    }
+
+    a,
+    span,
+    p {
+      color: var(--color-primary);
+      // padding-bottom: 24px;
+    }
+
+    .span {
+      display: block;
+    }
+
+
+  }
+
+  .email-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+
+    textarea {
+      display: flex;
+      height: 154px;
+      flex-direction: column;
+      align-items: flex-start;
+      align-self: stretch;
+    }
+
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      align-self: stretch;
+
+      .text-brand {
+        color: var(--color-black);
+        font-family: Nunito;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 48px;
+      }
+
+      p {
+        color: var(--color-primary);
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+      }
+    }
+  }
+}

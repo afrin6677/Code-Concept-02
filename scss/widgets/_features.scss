@@ -1,0 +1,200 @@
+.features {
+  display: flex;
+  padding: 100px 60px;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+  background: var(--color-white);
+
+  @include desktop-small {
+    padding: 3rem 1rem;
+  }
+
+  .features-header-section {
+    text-align: center;
+    width: 80%;
+
+    h4 {
+      span {
+        text-align: center;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px;
+        background: var(--gradient-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    h3 {
+      color: var(--color-black);
+      text-align: center;
+      font-family: Nunito;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 64px; 
+    }
+  }
+
+  .block-title {
+    color: var(--color-black);
+    // width: 60%;
+    text-align: center;
+    font-size: 48px;
+
+    @include desktop-small {
+      font-size: 36px;
+    }
+
+    font-style: normal;
+    font-weight: 600;
+    line-height: 60px;
+    /* 125% */
+    letter-spacing: -0.96px;
+  }
+
+  .features-container {
+    display: flex;
+    // padding: 2.5rem 0.625rem;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 1.5rem;
+    // flex-wrap: wrap;
+
+    @include desktop-small {
+      padding: 2.5rem 0;
+      flex-direction: column;
+    }
+
+    .feature {
+      display: flex;
+      padding: 24px 32px; 
+      align-items: flex-start;
+      gap: 0.75rem;
+      flex-shrink: 0;
+      cursor: pointer;
+      border-radius: 0.625rem;
+      background: #fff;
+      // box-shadow: 0px 0px 2px 0px rgba(204, 204, 204, 0.4);
+      box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+      transition: all 0.3s ease-in-out;
+      /* Add a smooth transition effect */
+      flex: 40%;
+      align-self: stretch;
+
+      p {
+        color: var(--color-primary);
+        text-align: center;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 155.556% */
+
+        @include desktop-small {
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px;
+        }
+      }
+
+      &.small-header {
+        .feature-title {
+          color: var(--color-secondary);
+          text-align: center;
+          font-family: Inter;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 32px; 
+        }
+
+        p {
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px;
+          /* 155.556% */
+        }
+      }
+
+      &.apply-border {
+        border: 2px solid var(--color-border);
+      }
+
+      &:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        transform: translateY(-.15rem);
+        /* Adjust the values as needed */
+      }
+
+      @include desktop-small {
+        flex: auto;
+      }
+
+      p {
+        color: #667085;
+      }
+
+      .feature-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        align-self: stretch;
+
+        $icon-size: 73px;
+
+        .feature-title {
+          color: var(--color-secondary);
+          text-align: center;
+          font-family: Inter;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 32px; 
+
+          @include desktop-small {
+            font-family: Inter;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 32px;
+          }
+        }
+
+        .icon-container {
+          width: $icon-size;
+          height: $icon-size;
+
+          &.rounded {
+            border-radius: 50%;
+          }
+
+          overflow: hidden;
+          border: 8px solid #F5FBFF;
+          background: #E0EAFF;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .icon {
+            // width: $icon-size;
+            // height: $icon-size;
+            width: 100%;
+            padding: 8px;
+            object-fit: cover; // This property ensures the image covers the entire container without distorting its aspect ratio
+          }
+        }
+      }
+    }
+  }
+}

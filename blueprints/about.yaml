@@ -1,0 +1,31 @@
+title: About Us
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            content_section:
+              ordering@: 3
+              type: section
+              title: Content Section
+              underline: true
+              
+              fields:
+                header.contents:
+                  style: vertical
+                  type: list
+                  fields:
+                    .img:
+                      type: pagemediaselect
+                      label: Image
+                    .title:
+                      type: text
+                      label: Title
+                    .text:
+                      type: textarea
+                      label: Details
+                      rows: 8

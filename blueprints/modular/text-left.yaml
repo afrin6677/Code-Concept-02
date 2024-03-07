@@ -1,0 +1,21 @@
+title: Text left
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+
+          fields:
+            header.text_left.image:
+              type: pagemediaselect
+              label: Image left
+            header.text_left.title.translatable:
+              type: text
+              label: Title
+              classess: 'translatable'
+            header.media_order:
+                ordering@: 99
+
+
